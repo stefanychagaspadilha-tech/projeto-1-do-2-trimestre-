@@ -1,3 +1,238 @@
-<h1>Meu blog tech</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Prosa | Cafeteria Artesanal</title>
+    <style>
+        /* Configurações Gerais de Estilo (CSS) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+        body {
+            background-color: #fcf9f5;
+            color: #4a3b32;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            background-color: #4a3b32;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            background-color: #d4a373;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b98453;
+        }
+
+        /* Seção Sobre Nós */
+        .about {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4a3b32;
+        }
+
+        /* Seção Cardápio / Grid de Destaques */
+        .menu-highlights {
+            background-color: #f3ede4;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .menu-highlights h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .price {
+            color: #d4a373;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #4a3b32;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Superior -->
+    <header>
+        <h1>☕ Café & Prosa</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero" id="inicio">
+        <h2>O melhor café para o seu dia</h2>
+        <p>Grãos selecionados, torra artesanal e um ambiente perfeito para pausar a rotina ou trabalhar com foco.</p>
+        <a href="#cardapio" class="btn">Ver Cardápio</a>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="about" id="sobre">
+        <h3>Nossa História</h3>
+        <p>Nascemos da paixão pelo café perfeito e pela boa conversa. Cada xícara servida no Café & Prosa é preparada por baristas que entendem do assunto, utilizando grãos 100% arábica de produtores locais. Venha nos visitar e sinta o aroma do verdadeiro café feito com amor.</p>
+    </section>
+
+    <!-- Seção Cardápio (Destaques) -->
+    <section class="menu-highlights" id="cardapio">
+        <h3>Destaques do Cardápio</h3>
+        <div class="grid">
+            
+            <!-- Item 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=500" alt="Café Latte">
+                <div class="card-content">
+                    <h4>Café Latte Artesanal</h4>
+                    <p>Expresso perfeito misturado com leite vaporizado cremoso e uma fina camada de espuma.</p>
+                    <p class="price">R$ 12,00</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=500" alt="Donut Recheado">
+                <div class="card-content">
+                    <h4>Donut Especial</h4>
+                    <p>Massa super fofinha com cobertura de chocolate meio amargo e granulados artesanais.</p>
+                    <p class="price">R$ 10,00</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=500" alt="Cheesecake de Frutas Vermelhas">
+                <div class="card-content">
+                    <h4>Cheesecake Premium</h4>
+                    <p>Base crocante de biscoito com creme de queijo leve e uma generosa calda de frutas vermelhas.</p>
+                    <p class="price">R$ 16,00</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Café & Prosa - Todos os direitos reservados.</p>
+        <p>Desenvolvido para o portfólio do GitHub 🚀</p>
+    </footer>
+
+</body>
+</html>
