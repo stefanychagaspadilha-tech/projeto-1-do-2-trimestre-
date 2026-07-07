@@ -1,381 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Portfólio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Delizia</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<link rel="stylesheet" href="style.css">
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #e74c3c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+
+        /* Seção Hero (Banner) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Cardápio */
+        .menu {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .menu h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #e74c3c;
+            margin: 10px auto 0;
+        }
+
+        .pizza-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .pizza-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .pizza-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pizza-card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .pizza-card p {
+            color: #777;
+            padding: 0 15px;
+            font-size: 0.9rem;
+            height: 60px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Contato */
+        .contato {
+            padding: 60px 0;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contato h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a252f;
+            color: #7f8c8d;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<nav>
-
-<h2>MeuSite</h2>
-
-<ul>
-
-<li><a href="#inicio">Início</a></li>
-
-<li><a href="#sobre">Sobre</a></li>
-
-<li><a href="#projetos">Projetos</a></li>
-
-<li><a href="#habilidades">Habilidades</a></li>
-
-<li><a href="#contato">Contato</a></li>
-
-</ul>
-
-</nav>
-
-<div class="hero" id="inicio">
-
-<h1>Olá 👋</h1>
-
-<h2>Eu sou Desenvolvedor Web</h2>
-
-<p>Crio sites modernos e responsivos.</p>
-
-<a href="#projetos" class="botao">Ver Projetos</a>
-
-</div>
-
-</header>
-
-<section id="sobre">
-
-<h2>Sobre Mim</h2>
-
-<p>
-
-Este é um modelo completo de portfólio.
-
-Você pode colocar sua descrição aqui.
-
-</p>
-
-</section>
-
-<section id="projetos">
-
-<h2>Projetos</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Projeto 1</h3>
-
-<p>Descrição do projeto.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Projeto 2</h3>
-
-<p>Descrição do projeto.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Projeto 3</h3>
-
-<p>Descrição do projeto.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="habilidades">
-
-<h2>Habilidades</h2>
-
-<div class="skills">
-
-<span>HTML</span>
-
-<span>CSS</span>
-
-<span>JavaScript</span>
-
-<span>Git</span>
-
-<span>GitHub</span>
-
-<span>React</span>
-
-</div>
-
-</section>
-
-<section id="contato">
-
-<h2>Contato</h2>
-
-<form>
-
-<input type="text" placeholder="Nome">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Mensagem"></textarea>
-
-<button>Enviar</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<p>© 2026 MeuSite</p>
-
-</footer>
-
-<script src="script.js"></script>
+    <header>
+        <div class="container">
+            <h1>Pizzaria Delizia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h2>A Verdadeira Pizza Italiana</h2>
+            <p>Feita no forno a lenha com ingredientes selecionados.</p>
+            <a href="#cardapio" class="btn">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <section id="cardapio" class="menu">
+        <h2>Nossas Pizzas</h2>
+        <div class="pizza-grid">
+            
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=80&w=600" alt="Pizza Margherita">
+                <h3>Margherita</h3>
+                <p>Molho de tomate artesanal, muçarela de búfala, manjericão fresco e azeite.</p>
+                <span class="price">R$ 45,00</span>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600" alt="Pizza Calabresa">
+                <h3>Calabresa</h3>
+                <p>Molho de tomate, muçarela, calabresa defumada fatiada e cebola.</p>
+                <span class="price">R$ 48,00</span>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600" alt="Pizza Quatro Queijos">
+                <h3>4 Queijos</h3>
+                <p>Muçarela, catupiry original, provolone e um toque marcante de gorgonzola.</p>
+                <span class="price">R$ 52,00</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="container" style="display: block;">
+            <h2>Faça seu Pedido!</h2>
+            <p>Telefone: (11) 99999-9999</p>
+            <p>Endereço: Rua das Pizzas, nº 123 - Bairro Saboroso</p>
+            <p style="margin-top: 20px;">Atendemos de Terça a Domingo, das 18h às 23h30.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pizzaria Delizia - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-header{
-height:100vh;
-background:linear-gradient(135deg,#0f172a,#2563eb);
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-position:fixed;
-width:100%;
-background:#0f172add;
-backdrop-filter:blur(10px);
-}
-
-nav h2{
-color:#38bdf8;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-.hero{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-height:100vh;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.hero h2{
-font-size:35px;
-margin:15px;
-}
-
-.hero p{
-max-width:500px;
-}
-
-.botao{
-margin-top:30px;
-padding:15px 35px;
-background:#38bdf8;
-color:#fff;
-text-decoration:none;
-border-radius:30px;
-transition:.3s;
-}
-
-.botao:hover{
-transform:scale(1.1);
-}
-
-section{
-padding:100px 10%;
-}
-
-section h2{
-text-align:center;
-margin-bottom:40px;
-font-size:35px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-background:#2563eb;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.skills span{
-background:#2563eb;
-padding:15px 25px;
-border-radius:30px;
-}
-
-form{
-display:flex;
-flex-direction:column;
-max-width:600px;
-margin:auto;
-gap:15px;
-}
-
-input,textarea{
-padding:15px;
-border:none;
-border-radius:10px;
-}
-
-button{
-padding:15px;
-background:#38bdf8;
-border:none;
-border-radius:10px;
-color:white;
-cursor:pointer;
-font-size:18px;
-}
-
-button:hover{
-background:#0ea5e9;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-}
-
-@media(max-width:768px){
-
-nav{
-flex-direction:column;
-align-items:center;
-}
-
-nav ul{
-margin-top:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero h2{
-font-size:25px;
-}
-
-}
-const elementos = document.querySelectorAll(".card");
-
-elementos.forEach(card => {
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.boxShadow="0 0 25px #38bdf8";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.boxShadow="none";
-
-});
-
-});
-
-window.addEventListener("scroll",()=>{
-
-document.querySelector("nav").style.background =
-window.scrollY>50
-? "#020617ee"
-: "#0f172add";
-
-});
-# Meu Portfólio
-
-Site desenvolvido em HTML, CSS e JavaScript.
-
-## Recursos
-
-- Layout responsivo
-- Menu fixo
-- Animações
-- Cards de projetos
-- Seção de habilidades
-- Formulário de contato
-- Fácil de personalizar
-
-## Como publicar no GitHub Pages
-
-1. Crie um repositório.
-2. Envie todos os arquivos.
-3. Abra **Settings > Pages**.
-4. Em **Source**, selecione **Deploy from a branch**.
-5. Escolha a branch `main`.
-6. Aguarde a publicação.
-
-Seu site ficará disponível em:
-
-https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
